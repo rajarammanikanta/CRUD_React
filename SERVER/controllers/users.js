@@ -21,7 +21,8 @@ export const getUser=(req,res)=>{
 }
 
 export const deleteUser=(req,res)=>{
-    const deleteUse=users.filter((user)=>user.id!==req.params.id); 
+    let userId=req.params.id
+    const deleteUse=users.filter((user)=>user.id!==userId); 
     res.send("User Deleted Successfully!");
 
 }
